@@ -4,12 +4,13 @@ import pygame
 
 class UI:
 
-    def __init__(self, game):
+    def __init__(self, game, text_handler):
         
         self.__init_graphics__()
         self.screen = None
         self.running = False
         self.game = game
+        self.text_handler = text_handler
 
 
     def __init_graphics__(self):
@@ -37,15 +38,18 @@ class UI:
 
     def Run(self):
 
+
         # initialize the screen, running state and pygame
         self.running = True
         pygame.init()
         self.screen = pygame.display.set_mode((self.screen_x, self.screen_y))
+        pygame.display.set_caption('Chess program')
 
         # for as long as the state is running, load graphics and go through events
         while(self.running):
             pygame.Surface.fill(self.screen, self.backcolor)
             self.game.display_on_ui(self)
+            self.text_handler.display_on_ui(self)
             pygame.display.flip()
 
             for event in pygame.event.get():

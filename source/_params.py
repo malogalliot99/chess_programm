@@ -3,6 +3,7 @@
 BACKCOLOR = (236,235,232)
 WHITE = (240,217,181)
 BLACK = (181,136,99)
+FONT_COLOR = (77,77,77)
 
 # DIMENSIONS
 
@@ -14,3 +15,6 @@ BOARD_SIZE = CELL_SIZE * 8
 
 X0 = (SCREEN_X - BOARD_SIZE) // 2
 Y0 = (SCREEN_Y - BOARD_SIZE) // 2
+
+# FONT
+FONT_LINK = "C:/Users/Malo/Documents/VS_Code/chess_programm/assets/fonts/Kanit.ttf"
